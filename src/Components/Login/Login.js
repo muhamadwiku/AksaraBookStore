@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Box, Card, CardMedia, Button, Typography, withStyles, Container, Grid, CssBaseline, Avatar, FormControlLabel, Checkbox, Link, } from '@material-ui/core';
+import { Box, Card, CardMedia, Button, Typography, withStyles, Container, Grid, CssBaseline, Avatar, FormControlLabel, Checkbox } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { useStyles } from './Style';
+import {Link} from 'react-router-dom';
 
 class Login extends Component {
   constructor(props) {
@@ -29,7 +30,7 @@ class Login extends Component {
                   <LockOutlinedIcon />
                 </Avatar>
                 <Typography component="h1" variant="h5">
-                  Sign in
+                  Akun Masuk
                 </Typography>
                 <form className={classes.form} noValidate>
                   <TextField
@@ -69,14 +70,14 @@ class Login extends Component {
                   </Button>
                   <Grid container>
                     <Grid item xs>
-                      <Link href="#" variant="body2">
+                      <Link to="/lupa-password" >
+                        <Button>
                         Lupa Password?
+                        </Button>
                       </Link>
                     </Grid>
                     <Grid item>
-                      <Link href="#" variant="body2">
-                        {"Belum punya Akun? Buat Akun"}
-                      </Link>
+                      <Link to="/register" ><Button>Buat Akun</Button></Link>
                     </Grid>
                   </Grid>
                 </form>
@@ -86,7 +87,7 @@ class Login extends Component {
 
             <Grid item className={classes.gridlogin} xs={12} md={6}>
               <Typography> 
-                <img className={classes.cardM} alt="contact center" src={require('../image/TU.png')} />
+                <img className={classes.cardM} alt="contact center" src={require('../image/logo-primary.png')} />
               </Typography>
             </Grid>
 

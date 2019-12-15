@@ -14,9 +14,10 @@ import { Route, BrowserRouter as Router } from "react-router-dom";
 // home
 
 import index from './index';
-import admin from './SuperAdmin/index';
-import user from './SuperUser/index';
-import Login from './SuperAdmin/Login/Login';
+import MiniDrawer from './Admin/Admin';
+// import admin from './SuperAdmin/index';
+// import user from './SuperUser/index';
+// import Login from './SuperAdmin/Login/Login';
 // import indexUnv from './index';
 
 
@@ -33,9 +34,10 @@ class App extends Component {
          
             {/* router link */}
            
-            <Route path="/Login-admin" component={Login} />
-            <Route exact path="/admin" component={admin} />
-            <Route exact path="/users" component={user} />
+            {/* <Route path="/Login-admin" component={Login} /> */}
+            {/* <Route exact path="/admin" component={admin} /> */}
+            <Route path="/admin" component={MiniDrawer} />
+            {/* <Route exact path="/users" component={user} /> */}
             <Route path="/" component={index}/>
             {/* end of router link */}
             {/* <Route path="/berita" component={Berita}/> */}
@@ -48,7 +50,7 @@ class App extends Component {
               <Route path="/Kontak" component={Kontak} /> */}
               {/* <Route path="/Login" component={Login} /> */}
             {/* end of home */}
-
+              
          
 
         </React.Fragment>

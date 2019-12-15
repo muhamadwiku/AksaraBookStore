@@ -66,7 +66,7 @@ class utama extends Component {
          <Grid container>
           <Grid item xs={12} md={6}>
             <div className={classes.headers}>
-            <Typography>
+            <Typography className={classes.headersText}>
               Aksara Toko buku online
               Terlengkap
             </Typography>
@@ -92,38 +92,348 @@ class utama extends Component {
         </Grid>
          </Container>
          </div>
-
+         &nbsp;
          <Container>
-           <Typography component="h4" variant="h4">
+           <Typography className={classes.text} component="h4" variant="h4">
              Daftar Buku
            </Typography>
            <hr/><br/>
-           <Grid container>
-           {items.map((item, i) => (
-             <Grid key={item.id_listbuku} item xs={12} md={3}>
+           <Grid container justify="center" alignItems="center" spacing={3}>
+           {/* {items.map((item, i) => ( */}
+
+           
+          {/* The Sky Is Everywhere */}
+          <Grid item xs={12} md={3}>
               <Card>
               <Container>
                 <CardMedia className={classes.cardBook}>
-                  <img className={classes.cardBookIMG} alt="catatan seorang em ainun nadjib" src={require('../image/bnr_sinau_bareng_markesot__w414_hauto.jpg')} />
+                  <img className={classes.cardBookIMG} alt="catatan seorang em ainun nadjib" src={require('../image/image1.jpg')} />
                 </CardMedia>
+                &nbsp;
                 <CardActionArea>
-                  <Typography component="h6" variant="h6">
-                   {item.judul}
+                 <Typography className={classes.imgtext} component="h6" variant="h6">
+                  The Sky Is Everywhere
                   </Typography>
+                  &nbsp;
                   <Typography component="p" variant="p">
-                    {item.pengarang}
+                  Jandy Nelson 
                   </Typography>
                   <Typography>
-                    {item.harga}
+                   Rp 165.000-
                   </Typography>
                 </CardActionArea>
                 <CardActions>
-                   <Link to={"/detail/"+item.id_listbuku}><Button> Beli Sekarang </Button></Link>
+                   <Link to={"/detail-produk/"}><Button variant="contained" color="secondary"  className={classes.BtnText}> Beli Sekarang </Button></Link>
                 </CardActions>
                 </Container>
               </Card>
              </Grid>
-             ))}
+
+             
+          {/* Passenger */}
+            <Grid item xs={12} md={3}>
+              <Card>
+              <Container>
+                <CardMedia className={classes.cardBook}>
+                  <img className={classes.cardBookIMG} alt="catatan seorang em ainun nadjib" src={require('../image/image2.jpg')} />
+                </CardMedia>
+                &nbsp;
+                <CardActionArea>
+                 <Typography className={classes.imgtext} component="h6" variant="h6">
+                  Passenger
+                  </Typography>
+                  &nbsp;
+                  <Typography component="p" variant="p">
+                  Alexandra Bracken  
+                  </Typography>
+                  <Typography>
+                   Rp 215.000-
+                  </Typography>
+                </CardActionArea>
+                <CardActions>
+                   <Link to={"/detail-produk/"}><Button variant="contained" color="secondary"  className={classes.BtnText}> Beli Sekarang </Button></Link>
+                </CardActions>
+                </Container>
+              </Card>
+             </Grid>
+
+          
+          {/* The Truth About Forever */}
+          <Grid item xs={12} md={3}>
+              <Card>
+              <Container>
+                <CardMedia className={classes.cardBook}>
+                  <img className={classes.cardBookIMG} alt="catatan seorang em ainun nadjib" src={require('../image/image3.jpg')} />
+                </CardMedia>
+                &nbsp;
+                <CardActionArea>
+                 <Typography className={classes.imgtext} component="h6" variant="h6">
+                  The Truth About Forever
+                  </Typography>
+                  &nbsp;
+                  <Typography component="p" variant="p">
+                  Sarah Dessen  
+                  </Typography>
+                  <Typography>
+                   Rp 120.000-
+                  </Typography>
+                </CardActionArea>
+                <CardActions>
+                   <Link to={"/detail-produk/"}><Button variant="contained" color="secondary"  className={classes.BtnText}> Beli Sekarang </Button></Link>
+                </CardActions>
+                </Container>
+              </Card>
+             </Grid>
+             
+             
+          
+          {/* Crooked Kingdom */}
+          <Grid item xs={12} md={3}>
+              <Card>
+              <Container>
+                <CardMedia className={classes.cardBook}>
+                  <img className={classes.cardBookIMG} alt="catatan seorang em ainun nadjib" src={require('../image/image4.jpg')} />
+                </CardMedia>
+                &nbsp;
+                <CardActionArea>
+                 <Typography className={classes.imgtext} component="h6" variant="h6">
+                  The Truth About Forever
+                  </Typography>
+                  &nbsp;
+                  <Typography component="p" variant="p">
+                  Leigh Bardugo
+                  </Typography>
+                  <Typography>
+                   Rp 98.000-
+                  </Typography>
+                </CardActionArea>
+                <CardActions>
+                   <Link to={"/detail-produk/"}><Button variant="contained" color="secondary"  className={classes.BtnText}> Beli Sekarang </Button></Link>
+                </CardActions>
+                </Container>
+              </Card>
+             </Grid>
+
+             
+          {/* Two-Way Street */}
+          <Grid item xs={12} md={3}>
+              <Card>
+              <Container>
+                <CardMedia className={classes.cardBook}>
+                  <img className={classes.cardBookIMG} alt="catatan seorang em ainun nadjib" src={require('../image/image5.jpg')} />
+                </CardMedia>
+                &nbsp;
+                <CardActionArea>
+                 <Typography className={classes.imgtext} component="h6" variant="h6">
+                  Two-Way Street
+                  </Typography>
+                  &nbsp;
+                  <Typography component="p" variant="p">
+                  Lauren Barnholdt
+                  </Typography>
+                  <Typography>
+                   Rp 110.000-
+                  </Typography>
+                </CardActionArea>
+                <CardActions>
+                   <Link to={"/detail-produk/"}><Button variant="contained" color="secondary"  className={classes.BtnText}> Beli Sekarang </Button></Link>
+                </CardActions>
+                </Container>
+              </Card>
+             </Grid>
+
+             
+          {/* Dreamland */}
+          <Grid item xs={12} md={3}>
+              <Card>
+              <Container>
+                <CardMedia className={classes.cardBook}>
+                  <img className={classes.cardBookIMG} alt="catatan seorang em ainun nadjib" src={require('../image/image6.jpg')} />
+                </CardMedia>
+                &nbsp;
+                <CardActionArea>
+                 <Typography className={classes.imgtext} component="h6" variant="h6">
+                  Dreamland
+                  </Typography>
+                  &nbsp;
+                  <Typography component="p" variant="p">
+                  Sarah Dessen
+                  </Typography>
+                  <Typography>
+                   Rp 148.000-
+                  </Typography>
+                </CardActionArea>
+                <CardActions>
+                   <Link to={"/detail-produk/"}><Button variant="contained" color="secondary"  className={classes.BtnText}> Beli Sekarang </Button></Link>
+                </CardActions>
+                </Container>
+              </Card>
+             </Grid>
+
+              {/* Rekayasa Perangkat Lunak */}
+          <Grid item xs={12} md={3}>
+              <Card>
+              <Container>
+                <CardMedia className={classes.cardBook}>
+                  <img className={classes.cardBookIMG} alt="catatan seorang em ainun nadjib" src={require('../image/image7.jpg')} />
+                </CardMedia>
+                &nbsp;
+                <CardActionArea>
+                 <Typography className={classes.imgtext} component="h6" variant="h6">
+                  Rekayasa Perangkat Lunak
+                  </Typography>
+                  &nbsp;
+                  <Typography component="p" variant="p">
+                  Informatika
+                  </Typography>
+                  <Typography>
+                   Rp 47.000-
+                  </Typography>
+                </CardActionArea>
+                <CardActions>
+                   <Link to={"/detail-produk/"}><Button variant="contained" color="secondary"  className={classes.BtnText}> Beli Sekarang </Button></Link>
+                </CardActions>
+                </Container>
+              </Card>
+             </Grid>
+
+             {/* Buku Sakti Pemrograman Web HTML, CSS, PHP, MySQL dan JavaScript */}
+          <Grid item xs={12} md={3}>
+              <Card>
+              <Container>
+                <CardMedia className={classes.cardBook}>
+                  <img className={classes.cardBookIMG} alt="catatan seorang em ainun nadjib" src={require('../image/image8.jpg')} />
+                </CardMedia>
+                &nbsp;
+                <CardActionArea>
+                 <Typography className={classes.imgtext} component="h6" variant="h6">
+                  Buku Sakti Pemrograman Web HTML, CSS, PHP, MySQL dan JavaScript
+                  </Typography>
+                  &nbsp;
+                  <Typography component="p" variant="p">
+                  Didik Setiawan 
+                  </Typography>
+                  <Typography>
+                   Rp 50.000-
+                  </Typography>
+                </CardActionArea>
+                <CardActions>
+                   <Link to={"/detail-produk/"}><Button variant="contained" color="secondary"  className={classes.BtnText}> Beli Sekarang </Button></Link>
+                </CardActions>
+                </Container>
+              </Card>
+             </Grid>
+
+             {/* Jalan Pintas Menjadi Master ReactJS + CD Tutorial */}
+          <Grid item xs={12} md={3}>
+              <Card>
+              <Container>
+                <CardMedia className={classes.cardBook}>
+                  <img className={classes.cardBookIMG} alt="catatan seorang em ainun nadjib" src={require('../image/image9.jpg')} />
+                </CardMedia>
+                &nbsp;
+                <CardActionArea>
+                 <Typography className={classes.imgtext} component="h6" variant="h6">
+                  Jalan Pintas Menjadi Master ReactJS + CD Tutorial
+                  </Typography>
+                  &nbsp;
+                  <Typography component="p" variant="p">
+                  Lukmanul Hakim 
+                  </Typography>
+                  <Typography>
+                   Rp 180.000-
+                  </Typography>
+                </CardActionArea>
+                <CardActions>
+                   <Link to={"/detail-produk/"}><Button variant="contained" color="secondary"  className={classes.BtnText}> Beli Sekarang </Button></Link>
+                </CardActions>
+                </Container>
+              </Card>
+             </Grid>
+
+              {/* Hacking Password */}
+          <Grid item xs={12} md={3}>
+              <Card>
+              <Container>
+                <CardMedia className={classes.cardBook}>
+                  <img className={classes.cardBookIMG} alt="catatan seorang em ainun nadjib" src={require('../image/image10.jpg')} />
+                </CardMedia>
+                &nbsp;
+                <CardActionArea>
+                 <Typography className={classes.imgtext} component="h6" variant="h6">
+                  Hacking Password
+                  </Typography>
+                  &nbsp;
+                  <Typography component="p" variant="p">
+                  Hasnul Arifin
+                  </Typography>
+                  <Typography>
+                   Rp 32.000-
+                  </Typography>
+                </CardActionArea>
+                <CardActions>
+                   <Link to={"/detail-produk/"}><Button variant="contained" color="secondary"  className={classes.BtnText}> Beli Sekarang </Button></Link>
+                </CardActions>
+                </Container>
+              </Card>
+             </Grid>
+
+                 {/* Analisis dan Perancangan Sistem Basis Data */}
+          <Grid item xs={12} md={3}>
+              <Card>
+              <Container>
+                <CardMedia className={classes.cardBook}>
+                  <img className={classes.cardBookIMG} alt="catatan seorang em ainun nadjib" src={require('../image/image11.jpg')} />
+                </CardMedia>
+                &nbsp;
+                <CardActionArea>
+                 <Typography className={classes.imgtext} component="h6" variant="h6">
+                  Analisis dan Perancangan Sistem Basis Data
+                  </Typography>
+                  &nbsp;
+                  <Typography component="p" variant="p">
+                  Wahyuni Reksoatmodjo
+                  </Typography>
+                  <Typography>
+                   Rp 76.000-
+                  </Typography>
+                </CardActionArea>
+                <CardActions>
+                   <Link to={"/detail-produk/"}><Button variant="contained" color="secondary"  className={classes.BtnText}> Beli Sekarang </Button></Link>
+                </CardActions>
+                </Container>
+              </Card>
+             </Grid>
+
+             
+                 {/* SQL Server 2012 */}
+          <Grid item xs={12} md={3}>
+              <Card>
+              <Container>
+                <CardMedia className={classes.cardBook}>
+                  <img className={classes.cardBookIMG} alt="catatan seorang em ainun nadjib" src={require('../image/image12.jpg')} />
+                </CardMedia>
+                &nbsp;
+                <CardActionArea>
+                 <Typography className={classes.imgtext} component="h6" variant="h6">
+                  SQL Server 2012
+                  </Typography>
+                  &nbsp;
+                  <Typography component="p" variant="p">
+                  Wahana Komputer
+                  </Typography>
+                  <Typography>
+                   Rp 49.200-
+                  </Typography>
+                </CardActionArea>
+                <CardActions>
+                   <Link to={"/detail-produk/"}><Button variant="contained" color="secondary"  className={classes.BtnText}> Beli Sekarang </Button></Link>
+                </CardActions>
+                </Container>
+              </Card>
+             </Grid>
+           
+             {/* ))} */}
            </Grid>
            
          </Container>

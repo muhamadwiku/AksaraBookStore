@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Link, NavLink, BrowserRouter as Router } from "react-router-dom";
-import { AppBar, Toolbar, Typography, Grid, withStyles, Container, Paper } from "@material-ui/core";
+import { AppBar, Button, Toolbar, Typography, Grid, withStyles, Container, Paper } from "@material-ui/core";
 // import IconButton from '@material-ui/core/IconButton';
 // import AccountCircle from '@material-ui/icons/AccountCircle';
 import { styleAppbar } from './Style';
@@ -31,14 +31,13 @@ class Navbar extends Component {
           <Paper className={classes.Paper}>
             <Grid container justify="flex-end" alignitems="center">
               <Grid item xs={6} md={1}>
-                <Typography>
-                  Login
-              </Typography>
+              <Link to="/login"> <Button>Login</Button> </Link>
               </Grid>
               <Grid item xs={6} md={1}>
-                <Typography>
-                  Register
-              </Typography>
+              <Link to="/register"> <Button>Register</Button> </Link>
+              </Grid>
+              <Grid item xs={6} md={2}>
+                <Link to="/kontak-kami"> <Button>Kontak Kami</Button> </Link>
               </Grid>
             </Grid>
           </Paper>

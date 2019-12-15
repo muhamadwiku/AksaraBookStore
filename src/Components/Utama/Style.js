@@ -41,6 +41,14 @@ export const styleHome = theme => ({
     borderRadius: 10,
   },
 
+  text:{
+    color:'white',
+    fontSize:18,
+    backgroundColor:'#A93092',
+    marginRight:'auto',
+    padding:6,
+},
+
   slideImg: {
     width: 1200,
     height: "100%",
@@ -54,6 +62,16 @@ export const styleHome = theme => ({
   // 
   headers: {
     height: 600,
+
+  },
+
+  headersText: {
+    position: "absolute",
+    color: "white",
+    fontSize: 20,
+    fontWeight: "bold",
+    textAlign: "center",
+    top: "50%",
   },
   // 
 
@@ -79,6 +97,14 @@ export const styleHome = theme => ({
     display: "block",
     marginLeft: "auto",
     marginRight: "auto",
+  },
+
+  imgtext: {
+    height: 40,
+  },
+
+  BtnText: {
+    textDecoration: "none",
   },
   // endof card home
 
